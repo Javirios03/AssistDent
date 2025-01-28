@@ -1,0 +1,24 @@
+{% extends "base.html" %}
+{% block content %}
+    <form method="POST" action="{{ url_for('formulario') }}">
+        <label for="nombre">Nombre:</label>
+        <input type="text" id="nombre" name="nombre" required>
+
+        <label for="fecha_nacimiento">Fecha de Nacimiento:</label>
+        <input type="date" id="fecha_nacimiento" name="fecha_nacimiento" required>
+
+        <label for="email">Correo Electrónico:</label>
+        <input type="email" id="email" name="email" required>
+
+        <label for="telefono">Teléfono:</label>
+        <input type="tel" id="telefono" name="telefono" required>
+
+        <label for="diagnostico">Diagnóstico:</label>
+        <input type="text" id="diagnostico" name="diagnostico" required>
+
+        <label for="fecha_revision">Fecha de Revisión:</label>
+        <input type="date" id="fecha_revision" name="fecha_revision" required>
+
+        <button type="submit">Enviar</button>
+    </form>
+{% endblock %}

@@ -1,0 +1,30 @@
+{% extends "base.html" %}
+{% block content %}
+    <h2>Listado de Pacientes</h2>
+    <table>
+        <thead>
+            <tr>
+                <th>ID</th>
+                <th>Nombre</th>
+                <th>Fecha de Nacimiento</th>
+                <th>Email</th>
+                <th>Teléfono</th>
+                <th>Diagnóstico</th>
+                <th>Fecha de Revisión</th>
+            </tr>
+        </thead>
+        <tbody>
+            {% for paciente in pacientes %}
+            <tr>
+                <td>{{ paciente[0] }}</td>
+                <td>{{ paciente[1] }}</td>
+                <td>{{ paciente[2] }}</td>
+                <td>{{ paciente[3] }}</td>
+                <td>{{ paciente[4] }}</td>
+                <td>{{ paciente[5] }}</td>
+                <td>{{ paciente[6] }}</td>
+            </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+{% endblock %}
